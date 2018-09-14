@@ -1,7 +1,5 @@
 package com.alg.advtop20.graphs.traversal;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class CycleDetection {
 
@@ -19,6 +17,7 @@ public class CycleDetection {
 		}
 		return false;	
 	}
+	//TC:O(V ^ 2)   SC:O(V)
 	public static boolean hasCycle1(int[][] in) {
 		boolean[] visit = new boolean[in.length];
 		for(int u = 0; u < in.length; ++u) {

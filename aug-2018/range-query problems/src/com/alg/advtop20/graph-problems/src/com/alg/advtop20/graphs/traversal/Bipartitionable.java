@@ -16,6 +16,7 @@ public class Bipartitionable {
 		}
 		return false;
 	}
+	//TC:O(V ^ 2)   SC:O(V)
 	public static boolean isBipartite(int[][] in) {
 		int[] visit = new int[in.length];
 		for(int u = 0; u < in.length; ++u) {
