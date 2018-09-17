@@ -44,5 +44,26 @@ public class GraphUtils {
 		return in;
 	}
 
+	public static int[][] randomDirectedGraph(int n) {
+		int[][] in = new int[n][n];
+		Random r = new Random(100);
+		for(int k = 1; k <= n; ++k) {
+			int ri = r.nextInt(n);
+			int rj = r.nextInt(n);
+			if(ri == rj) continue;
+			in[ri][rj] = 1;
+		}
+		return in;
+	}
+	public static int[][] completeDirectedGraph(int n) {
+		int[][] in = new int[n][n];
+		for(int i = 0; i < n; ++i) {
+			for(int j = i+1; j < n; ++j)  {
+				in[i][j] = 1;
+			}
+		}
+		return in;
+	}
+	
 
 }
