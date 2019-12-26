@@ -1,4 +1,4 @@
-package com.alg.advtop20.advdp;
+package com.alg.advtop20.dp3;
 
 public class MyInteger {
 	private int value;
