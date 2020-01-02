@@ -8,11 +8,12 @@ public class GraphUtils {
 	public static int[][] undirectedRandomGraph(int n) {
 		int[][] in = new int[n][n];
 		Random r = new Random(0);
-		int nedges = n * (n-1)/2;
+		int nedges = n;
 		for (int i = 0; i < nedges; ++i) {
 			int u = r.nextInt(n);
 			int v = r.nextInt(n);
-			in[u][v] = in[v][u] = 1;
+			if(u != v)
+				in[u][v] = in[v][u] = 1;
 		}
 		return in;
 	}
