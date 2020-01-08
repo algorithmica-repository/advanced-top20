@@ -26,6 +26,16 @@ public class GraphUtils {
 		}
 		return in;
 	}
+	
+	public static int[][] directedCompleteGraph(int n) {
+		int[][] in = new int[n][n];
+		for (int u = 0; u < n; ++u) {
+			for (int v = u + 1; v < n; ++v)
+				in[u][v] = 1;
+		}
+		return in;
+	}
+
 
 	public static void display(int[][] in) {
 		for (int[] tmp : in) {
